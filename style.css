@@ -11,7 +11,7 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(177, 79, 79);
+    background: rgb(160, 44, 44);
    margin: 0 auto;
    margin-bottom: 20px;
     display: flex;
@@ -23,7 +23,7 @@ nav {
 h1 {
     display: flex;
     align-items: center;
-    color: rgb(250, 243, 243);
+    color: rgb(255, 255, 255);
     flex: 1;
     margin: 0;
 }
@@ -37,12 +37,12 @@ h1 {
 }
 a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
 }
 
 /* main container area beneath menu */
 main {
-    background: rgb(162, 92, 92);
+    background: rgb(175, 74, 74);
     display: flex;
     border: 2px solid rgb(96, 11, 11);
   padding: 7px;
@@ -83,7 +83,7 @@ main {
 
 #portfolio a {
     text-decoration: none;
-    color: #f7f7f7;
+    color: #fcfcfc;
 }
 
   /* responsive web design */
