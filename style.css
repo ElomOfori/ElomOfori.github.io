@@ -1,6 +1,6 @@
 body {
     background: rgb(151, 33, 33);
-    color: rgba(0, 0, 0, 0.913);
+    color: rgba(255, 255, 255, 0.913);
     padding: 10px;
     font-family: Arial;
 }
@@ -42,7 +42,7 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: rgb(175, 74, 74);
+    background: rgb(149, 73, 73);
     display: flex;
     border: 2px solid rgb(96, 11, 11);
   padding: 7px;
