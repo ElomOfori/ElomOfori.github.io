@@ -93,7 +93,7 @@ function changeAnimationType() {
     jumpTimer--;
   } else {
     jumpTimer = 0;
-    if (Math.abs(player.speedX) > 0) {
+    if (Math.abs(player.speedX) > 10) {
       //if you're moving then change animation to walking or running
       if (keyPress.left || keyPress.right) {
         currentAnimationType = animationTypes.run;
