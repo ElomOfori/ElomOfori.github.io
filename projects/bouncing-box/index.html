@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(192, 43, 43);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -63,6 +63,9 @@
 			
 			// TODO 2 - Variable declarations 
 			
+			var positionX = 0;
+			var points = 0;
+			var speed = 10;
 
 			
 			/* 
@@ -71,7 +74,10 @@
 			turn it around! 
 			*/
 			function update() {
-				
+				/* Your code to increase positionX by 10 here */
+				positionX = positionX + 10;
+				moveBoxTo(positionX);
+
 
 			};
 
@@ -81,7 +87,11 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
+				positionX = 0;	
+
+				// Your code to increase the points variable by 1
+
+				changeBoxText(points);
 
 
 			};
