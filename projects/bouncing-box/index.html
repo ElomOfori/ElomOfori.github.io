@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: rgb(192, 43, 43);
+			background-color: rgb(152, 4, 4);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -65,7 +65,10 @@
 			
 			var positionX = 0;
 			var points = 0;
-			var speed = 10;
+			var speed = 10
+			var myVariable = someValue;
+			var points
+			var speed = 10
 
 			
 			/* 
@@ -73,7 +76,7 @@
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
-			function update() {
+				function update() {
 				/* Your code to increase positionX by 10 here */
 				positionX = positionX + 10;
 				moveBoxTo(positionX);
@@ -88,13 +91,14 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;	
-
+				changeBoxText(1);
+			}
 				// Your code to increase the points variable by 1
 
 				changeBoxText(points);
 
 
-			};
+			
 		})();
 	</script>
 </body>
