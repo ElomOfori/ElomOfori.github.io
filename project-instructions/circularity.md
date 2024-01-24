@@ -15,7 +15,7 @@ Also at: http://bit.ly/op-spark-circularity
   - [TODO 5 : Keep your circles in the screen](#todo-5--keep-your-circles-in-the-screen)
   - [TODO 6 : Loop from all sides](#todo-6--loop-from-all-sides)
   - [TODO 7 : Draw 100 circles](#todo-7--draw-100-circles)
-  - [TODO 8 : Iterate over the array](#todo-8--Iterate-over-the-array)
+  - [TODO 8 : Iterate over the array](#todo-8--iterate-over-the-array)
   - [TODO 9 : Move all our circles and keep them all in bounds](#todo-9--move-all-our-circles-and-keep-them-all-in-bounds)
   - [TODO 10 : Go Live](#todo-10--go-live)
 
@@ -38,30 +38,33 @@ Some concepts you'll practice and learn:
 
 # Lesson Steps
 
-## **TODO 1 :** *Declare Our Variables*
+## **TODO 1 :** _Declare Our Variables_
 
 The goal of this project is to create 100 animated circles. Before we get ahead of ourselves, let's create one circle.
 
-**FIND:** 
-* Locate the `js/init.js` file. We will do all our coding in this file. 
-* Find the `PROGRAM SETUP` comment within your file. The area where you will add the code for `TODO 1` will be below.
+**FIND:**
+
+- Locate the `js/init.js` file. We will do all our coding in this file.
+- Find the `PROGRAM SETUP` comment within your file. The area where you will add the code for `TODO 1` will be below.
 
 **CODE:**
-* Declare a variable to hold one circle (we will deal with initializing it later),  as well as an empty array to hold our circles (more on that later):
 
-	* Make sure under **TODO 1**,  you declared 2 variables: `circle` and `circles`
-	  <details>
+- Declare a variable to hold one circle (we will deal with initializing it later), as well as an empty array to hold our circles (more on that later):
 
-	  **<summary>What your code should look like:</summary>**
+  - Make sure under **TODO 1**, you declared 2 variables: `circle` and `circles`
+      <details>
 
-      ````javascript
-	    // TODO 1: Declare our variables //
-	    var circle;			// variable to hold a single circle when creating circles / iterating
-	    var circles = [];	// variable to store all circles in one Array
-	  ````
-	</details>
+    **<summary>What your code should look like:</summary>**
+
+    ```javascript
+    // TODO 1: Declare our variables //
+    var circle; // variable that will hold a single circle when creating circles
+    var circles = []; // variable to store all circles in one Array
+    ```
+
+    </details>
+
 #
-
 
 <br>
 <br>
@@ -72,7 +75,7 @@ The goal of this project is to create 100 animated circles. Before we get ahead 
 
 ## **TODO 2 :** _Create a function to draw a circle_
 
-We will want to draw many circles in this project so putting the code to draw one circle inside a **function** will make the code much more re-usable! We've created a variable for you called `drawCircle` to hold our function.
+We will want to draw many circles in this project so putting the code to draw one circle inside a **function** will make the code much more re-usable!
 
 **FIND:**
 
@@ -85,7 +88,7 @@ We will want to draw many circles in this project so putting the code to draw on
   ```javascript
   // Code to draw a circle
   circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
-  physikz.addRandomVelocity(circle, canvas);
+  physikz.addRandomVelocity(circle, canvas, 2.5, 2.5);
   view.addChild(circle);
   circles.push(circle);
   ```
@@ -122,28 +125,30 @@ We will want to draw many circles in this project so putting the code to draw on
 <br>
 <hr>
 
-## **TODO 3 :** *Draw 5 circles!*
+## **TODO 3 :** _Draw 5 circles!_
 
-**FIND:** 
+**FIND:**
 
-* Locate the `// TODO: 3 / 7` comment within the `PROGRAM SETUP` section of your file.
+- Locate the `// TODO: 3 / 7` comment within the `PROGRAM SETUP` section of your file.
 
-	```js
-	// TODO 3 / 7 : Call the drawCircle() function 
-	/* Your Function Calls HERE */
-	```
-**CODE:** 
+  ```javascript
+  // TODO 3 / 7 : Call the drawCircle() function
+  /* Your Function Calls HERE */
+  ```
 
-* Call your new `drawCircle` Function 5 times:
+**CODE:**
 
-	* **HINT:** You can make a **Function Call** using the following syntax:
+- Call your new `drawCircle` Function 5 times:
 
-		```javascript
-		nameOfFunction();
-		```
+  - **HINT:** You can make a **Function Call** using the following syntax:
 
-**TEST:** 
-* Save your code and refresh your game
+    ```javascript
+    nameOfFunction();
+    ```
+
+**TEST:**
+
+- Save your code and refresh your game
 
 For now, by copying and pasting these function calls we are violating the **DRY Rule: D**ont **R**epeat **Y**ourself. Keep this in mind as we move on. We'll find a better way to do this later!
 
@@ -184,7 +189,7 @@ Awesome, let's do some fun stuff with our circles now.
 - Do the same with the other 4 circles.
   <details>
 
-  **<summary>Your code should look like this</summary>\***
+  **<summary>Your code should look like this</summary>**
 
   ```javascript
   function update() {
@@ -202,9 +207,9 @@ Awesome, let's do some fun stuff with our circles now.
 
 > ### _Suggestion_
 >
-> You can make your circles move more quickly (once they are moving) by changing the `physikz.addRandomVelocity` line to have two extra arguments. This will make testing future steps easier.
+> You can make your circles move more quickly (once they are moving) by changing the arguments of the `physikz.addRandomVelocity` function call in your `drawCircle` function declaration.
 >
-> Back up in the `drawCircle()` function, try changing that line to be `physikz.addRandomVelocity(circle, canvas, 10, 10);`. If you want the circles to go faster, put bigger numbers. If you want them to go slower, put smaller ones.
+> The arguments `2.5` and `2.5` represent the x and y speeds of the new circle. If you want the circles to go faster, change the last two arguments from `2.5` to larger numbers. If you want them to go slower, use smaller numbers. Note that the numbers do not have to be the same value.
 
 #
 
@@ -421,14 +426,13 @@ Now that we have 100 circles, we need a way to move all 100 circles and keep all
 > 2.  What needs to change from loop to loop?
 > 3.  How long will the loop run?
 >
-> In our case, we want to _access every `circle` from our `circles` array_ and _apply the `physikz.updatePosition(circle)` function on each circle_. The circle called in the physics.updatePosition function changes from loop to loop. We will loop until every circle has been called on!
+> In our case, we want to _access every `circle` from our `circles` array_ and _apply the `physikz.updatePosition(circle)` function on each circle_. The circle called in the physikz.updatePosition function changes from loop to loop. We will loop until every circle has been called on!
 >
 > > **To iterate we can follow this pattern**
 > >
 > > ```javascript
 > > for (var i = 0; i < myArray.length; i++) {
 > >   // code to repeat using i
-> >    
 > > }
 > > ```
 

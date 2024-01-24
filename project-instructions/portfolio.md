@@ -196,12 +196,7 @@ We're going to build the page from scratch:
 
 **CODE:**
 
-- **1b)** Right click within the root directory of your website,and choose `New File`.
-- **1c)** Name the file `portfolio.html`.
-
-  - When your done with this step, you should have two HTML files next to each other in the root directory of your website: `index.html` and `portfolio.html`.
-
-- **1d)** Double-click on the `portfolio.html` file to open it in the text editor. Within this file, create the boilerplate HTML by adding the following HTML tags (notice that you did something similar with your first website project):
+- **1b)** Double-click on the `portfolio.html` file to open it in the text editor. Within this file, create the boilerplate HTML by adding the following HTML tags (notice that you did something similar with your first website project):
 
   ```HTML
   <!DOCTYPE HTML>

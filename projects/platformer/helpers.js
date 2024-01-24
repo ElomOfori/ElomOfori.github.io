@@ -93,7 +93,7 @@ function changeAnimationType() {
     jumpTimer--;
   } else {
     jumpTimer = 0;
-    if (Math.abs(player.speedX) > 10) {
+    if (Math.abs(player.speedX) > 0) {
       //if you're moving then change animation to walking or running
       if (keyPress.left || keyPress.right) {
         currentAnimationType = animationTypes.run;
@@ -663,7 +663,7 @@ function keyboardControlActions() {
     player.speedX += walkAcceleration;
     player.facingRight = true;
   }
-  if (keyPress.space) {
+  if (keyPress.space || keyPress.up) {
     if (player.onGround) {
       //this only lets you jump if you are on the ground
       player.speedY = player.speedY - playerJumpStrength;

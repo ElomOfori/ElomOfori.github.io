@@ -14,7 +14,7 @@ We're gonna go live on GitHub with your very own website!
     - [HTML in 3 Minutes](#html-in-3-minutes)
   - [Lesson Steps](#lesson-steps)
     - [Work Flow](#work-flow)
-    - [TODO 1 : Create index.html](#todo-1--create-indexhtml)
+    - [TODO 1 : Update index.html](#todo-1--update-indexhtml)
     - [TODO 2 : Add a Title](#todo-2--add-a-title)
     - [TODO 3 : Create Sections for the Menu and Main Content](#todo-3--create-sections-for-the-menu-and-main-content)
     - [TODO 4 : Create Structure for our Content](#todo-4--create-structure-for-our-content)
@@ -125,18 +125,14 @@ Above, you'll see this pattern often - notice that we have one `<div>` tag with 
 >
 > Part of being a good developer is being able to follow instructions closely. Sometimes we may be showing you code examples to make a point, versus adding code (any additional details for reference, you will see displayed with a sideways triangle). Make sure you are adding/removing code _only_ if a specific step asks you to.
 
-## **TODO 1 :** _Create index.html_
+## **TODO 1 :** _Update index.html_
 
 - **1a.** **FIND:** Locate the file tree on the left side of your workspace
-- **1b.** **FIND:** Right click inside of your file tree (not on top of any files/folders that are currently there) and select “New File” (See below)
+- **1b.** **FIND:** Open up the `index.html` file. (See below)
 
-    <img src="img/gitpod-create-new-file.png" style="max-height: 450px">
+    <img src="img/gitpod-open-file.png" style="max-height: 350px">
 
-- **1c.** **CODE:** Make sure to name the file `index.html` (See below)
-
-    <img src="img/gitpod-name-new-file.png" style="max-height: 350px">
-
-- **1d.** **CODE:** Add the following boilerplate code in your file to get started:
+- **1c.** **CODE:** Add the following boilerplate code in your `index.html` file to get started:
 
   ```HTML
   <!DOCTYPE HTML>
@@ -381,10 +377,6 @@ Now, save your page and preview it.
 > To preview your page, right click on the `index.html` file and select "Open with Live Server" (See Below)
 >
 > <img src="img/gitpod-preview-html-file.png" style="max-height: 550px">
->
-> If you want to close or reopen your preview later, you only need to click on the preview button on the right (See Below)
->
-> <img src="img/gitpod-toggle-preview.png" style="max-height: 350px">
 > </details>
 
 #
@@ -518,7 +510,7 @@ We now have a fairly plain website but it's a website! Let's add some style. Her
        </details>
        <br>
 
-  - **CODE:** Create a new file named `style.css`. All of the CSS rules will go in this CSS file.
+  - **FIND:** Open the  file named `style.css`. All of the CSS rules will go in this CSS file.
 
 - **9b.** **CODE:** Copy the entire section below and place it inside the `style.css` file
 

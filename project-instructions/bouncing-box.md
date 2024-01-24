@@ -19,13 +19,14 @@
 # Overview
 We're going to create a simple game where a box moves across the screen at an increased speed after each click.
 
-<a href="https://output.jsbin.com/goyuhod/9" target="_blank"> When you are done it should look like this (Right Click --> Open in new tab) </a>
+<a href="https://output.jsbin.com/bixaxat" target="_blank"> When you are done it should look like this (Right Click --> Open in new tab) </a>
 
-<img src="images/bouncing-box.gif">
+<img src="img/bouncing-box.gif">
 Our goal for this game is to learn how to bring together HTML, CSS, and JavaScript. We used: 
-   * HTML to define our structure 
-   * CSS to define the style of that structure 
-   * JavaScript in order to implement behavior
+
+* HTML to define our structure 
+* CSS to define the style of that structure 
+* JavaScript in order to implement behavior
 
 One of the primary ways we can implement behavior in JavaScript is by making modifications to the HTML and CSS in response to **events** which we will demonstrate by making this simple game. 
 
@@ -42,13 +43,13 @@ This project will introduce you to a few key concepts:
 
 For this program you will be given _**stencil code**_ found in the `index.html` file. This stencil will set up the program for you so that you can focus on the take aways of this project.
 
-   * <details>
+   <details>
      <summary> How to navigate TODOS </summary>
 
       To complete the assignment, below you'll find numbered **TODO** lesson steps.  Each TODO will take you one step closer to completing the project and often times you may be required to complete multiple TODOs to complete a feature of the program. 
 
       Please follow the instructions closely. Sometimes we may only show you code examples to make a point, and there is no code required to be entered. These instructions will often be labeled with **FIND**. In the steps that do require inputing some code, you will be explicitly told to do so. These steps will be labeled with **CODE:**. When entering code make sure to read the instructions closely to see _where_ you are supposed to write your code. Occasionally you will receive hints for the coding steps. These hints will be labeled with **HINTS:**. Finally **Save and Observe** sections give you explanations of what your code is doing. You should not actually do anything in these sections; just try to understand what is going on.
-      </details>
+</details>
 
 ### **A note about jQuery in this project**
 <details>
@@ -86,10 +87,17 @@ Since the width of the screen, the screen resolution, or the size of the window 
 <br>
 <br>
 <br>
-<br>
-<br>
 
-#
+
+
+<font size="6">**PLEASE READ:**</font>
+<br>
+<font size="5">
+*None of the code provided in these instructions should be copied and pasted into your project. All code snippets are examples meant to guide you in writing your own code and provide a general description of what changes happen throughout the program.*
+</font>
+<br>
+<br>
+<br>
 
 # Lesson Steps
 
@@ -105,8 +113,9 @@ Since the width of the screen, the screen resolution, or the size of the window 
 <br>
 
 ## **TODO 1:** *Learn how to move the box*
+**IMPORTANT:** This TODO has 2 steps. Make sure to complete all steps before moving on!
 
-**IMPORTANT:**This TODO has 2 steps. Make sure to complete all steps before moving on!
+
 
 Moving the box requires us to change the CSS of the box. However, CSS can only be hardcoded - once it is set, it won't change unless the programmer changes it.
 
@@ -149,7 +158,7 @@ CSS allows us to hard code a starting position for the box. If we want the posit
 **FIND:** 
 
 * Locate the `<script>` tag within the `index.html` file. 
-* Then, find the `moveBoxTo` Function (around **line 47**). 
+* Then, find the `moveBoxTo` Function (around **line 51**). 
       <details> 
       <summary>It looks like this:</summary>
 
@@ -162,11 +171,11 @@ CSS allows us to hard code a starting position for the box. If we want the posit
 
     * This Function uses `jQuery` and the `box.css()` Function to change the `left` CSS property of the box. When you call the Function, simply provide a value for `newPositionX`.
 
-* Next, find the `update` function's `{code block}` (around line 69).
+* Next, find the `update` function's `{code block}` (around line 73).
 
 **CODE:** 
 
-* In the `update` Function call the `moveBoxTo()` Function with an Argument of `100`. 
+* In the `update` Function's code block, call the `moveBoxTo()` Function with an Argument of `100`. 
     <details>
     <summary>The update function should look like this:</summary>
 
@@ -240,13 +249,13 @@ Variables allow the computer to remember pieces of information as our program ru
 
 
 
-     * <details>
-       <summary> HINT: To declare a Variable, use this syntax:</summary>
-
-         ```js
-            var myVariable = someValue;
-         ```
-       </details>
+      > <details>
+      > <summary> HINT: To declare a Variable named myVariable, use this syntax:</summary>
+      >
+      >  ```js
+      >      var myVariable = someValue;
+      >  ```
+      > </details>
 
 <br>
 <br>
@@ -262,16 +271,15 @@ Variables allow the computer to remember pieces of information as our program ru
 
 * Replace the hard-coded value in `moveBoxTo()` with your new Variable. 
 
-   * <details> 
-     <summary> Click to verify your code looks like this:</summary>
-
-     ```javascript
-     function update() {
-      moveBoxTo(positionX);
-
-     };
-     ```
-</details>
+    ><details> 
+    > <summary> Click to verify your code looks like this:</summary>
+    >
+    > ```javascript
+    > function update() {
+    >    moveBoxTo(positionX);
+    > };
+    > ```
+    > </details>
 
 <br>
 <br>
@@ -293,18 +301,18 @@ Because `positionX` is not changing, the box is being re-drawn in the same posit
 
     ```javascript
      function update() {
-        /* Your Code to Increase positionX by 10 HERE*/
-        moveBoxTo(positionX);
-    
+        /* Your Code to Increase positionX by 10 HERE */
+
+        moveBoxTo(positionX);    
      };
     ```
 
-* Below the comment you just added, increase the value of `positionX` by `10` on each Frame:
+* Below the comment you just added, write a line of code that increases the value stored in the `positionX` variable by `10` on each Frame:
 
 
 
-   >*  <details> 
-   >    <summary> HINT: To increase a Variable by `10` we can write:</summary>
+   >  <details> 
+   >    <summary> HINT: To increase a Variable by 10 we can write:</summary>
    >
    >    ```javascript
    >    myVariable = myVariable + 10;
@@ -371,8 +379,7 @@ One of our goals is to reset the box to the starting position when the box is cl
    >
    > ```javascript
    > function handleBoxClick() {
-   >   positionX = 0;
-   > 
+   >    positionX = 0;
    > }
    > ```
    ></details>
@@ -455,8 +462,7 @@ In order for the box to show the correct number of points, we'll need to:
    >function handleBoxClick() {
    >    positionX = 0;
    >    changeBoxText(1);
-   >    
-   >
+   >}
    >```
    </details>
 
@@ -501,7 +507,7 @@ Again, however, this value is hard-coded. No matter how many times we click on t
 
 **CODE** 
 
-* Modify the `changeBoxText()` Function Call so that it uses your new `points` Variable as an argument instead of the hard-coded value `1`.
+* Modify the `changeBoxText()` Function Call so that it uses your new `points` Variable as the argument instead of the hard-coded value `1`.
 
 <br>
 <br>
@@ -585,8 +591,8 @@ Now that we can keep track of how many times we've clicked on the box, we also w
 **FIND:** 
 * Locate the `update` Function.
 
-**CODE** 
-* Modify this code so that it uses your new `speed` Variable to change `positionX` instead of the hard-coded value `10`.
+**CODE:** 
+* Modify this code so that the `positionX` variable is increased by `speed` instead of the hard-coded value `10`.
 
 <br>
 <br>
@@ -631,7 +637,7 @@ Detecting when one Object collides with another is one of the most common proble
 
 In our game, we need to detect when the box collides with the right wall and the left wall. The illustration below shows how this may play out from Frame to Frame:
 
-<img src="images/collisionDetection.png">
+<img src="img/collisionDetection.png">
 
 The collision occurs on Frame 3 when `positionX` (`250`) is *greater than* the constant Variable `boardWidth` (`200`): 
 
@@ -643,7 +649,7 @@ Even though the collision doesn't occur until Frame 3, the program has to check 
 <br>
 <br>
 
-## TODO 6 Part1: Detecting Collisions on the right wall
+## TODO 6 Part 1: Detecting Collisions on the right wall
 
 **FIND:** 
 
@@ -671,7 +677,7 @@ Even though the collision doesn't occur until Frame 3, the program has to check 
           >
           >If you need help understanding how we can change the direction of the box, take a look at the illustration below:
           >
-          ><img src="images/changeOfSpeed.png">
+          ><img src="img/changeOfSpeed.png">
           >
           >In **Frame 3.5**, _after_ the collision has been detected but before the next Frame, notice that the `speed` Variable changes from positive `100` to negative `-100`. This change allows the box to change direction.
           >
@@ -714,7 +720,7 @@ Now, using what you've learned about how to bounce the box off the right wall, i
         >
         >If you see your box doing this...
         ><br>
-        ><img src="images/wiggle_bug.gif">
+        ><img src="img/wiggle_bug.gif">
         >
         >Then that means that one or both of your boundary comparisons are incorrect. There are two possible places where this could go wrong.
         >
@@ -765,7 +771,7 @@ Great work! It seems like our Bouncing Box game is complete. However, we've crea
 Okay, to understand this bug, imagine that the game has just begun and the box is moving to the right. We know that `speed` is `10` and `positionX` is `0`.  Each time a new frame is drawn, we execute the code below:
 
 ```js
-positionX += speed;
+positionX = positionX + speed;
 ```
 
 `positionX` will _increase_ by `10` on each frame, moving the box to the right. Great.
